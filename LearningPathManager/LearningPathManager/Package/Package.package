@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="dafc9de6-7bfe-4bf4-90bc-5fa6c3ecd44f" solutionId="dafc9de6-7bfe-4bf4-90bc-5fa6c3ecd44f" resetWebServer="false" sharePointProductVersion="16.0" name="LearningPathManager" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="83e1664b-c9c8-466d-b799-fa945e764975" />
+    <featureReference itemId="030d29b0-8906-415d-a76c-e85c066cf7a0" />
+  </features>
+</package>
