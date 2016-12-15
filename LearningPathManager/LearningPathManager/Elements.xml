@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="App\App.js" Url="App/App.js" ReplaceContent="TRUE" />
+    <File Path="App\config.js" Url="App/config.js" ReplaceContent="TRUE" />
+    <File Path="App\config.exceptionHandler.js" Url="App/config.exceptionHandler.js" ReplaceContent="TRUE" />
+    <File Path="App\config.route.js" Url="App/config.route.js" ReplaceContent="TRUE" />
+    <File Path="App\common\common.js" Url="App/common/common.js" ReplaceContent="TRUE" />
+    <File Path="App\common\logger.js" Url="App/common/logger.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

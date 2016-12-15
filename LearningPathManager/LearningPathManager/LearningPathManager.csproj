@@ -56,23 +56,37 @@
       <SharePointProjectItemId>{e56aaecb-7c7b-4fb8-b6e0-2e9b07cf99ed}</SharePointProjectItemId>
     </None>
     <None Include="Features\Feature2\Feature2.feature">
-      <FeatureId>{030d29b0-8906-415d-a76c-e85c066cf7a0}</FeatureId>
+      <FeatureId>{3460d7b9-4ef6-4d3d-a685-5a6bcd49110f}</FeatureId>
     </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{1bd0747a-92e4-4972-9822-189d2988a851}</SharePointProjectItemId>
     </None>
+    <Content Include="App\app.js" />
+    <Content Include="App\common\common.js" />
+    <Content Include="App\common\logger.js" />
+    <Content Include="App\config.exceptionHandler.js" />
+    <Content Include="App\config.js" />
+    <Content Include="App\config.route.js" />
     <Content Include="Data\LearningItemList\Elements.xml" />
     <Content Include="Data\LearningItemList\LearningItemListInstance\Elements.xml" />
     <Content Include="Data\LearningItemList\Schema.xml" />
     <Content Include="Data\LearningPathList\Elements.xml" />
     <Content Include="Data\LearningPathList\LearningPathListInstance\Elements.xml" />
     <Content Include="Data\LearningPathList\Schema.xml" />
+    <Content Include="Elements.xml" />
     <Content Include="Features\Feature2\Feature2.Template.xml">
       <DependentUpon>Feature2.feature</DependentUpon>
     </Content>
+    <Content Include="Images\error.png" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\success.png" />
+    <Content Include="Images\warning.png" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{efbf9c64-dbdb-439f-95fa-99ccb2aafcb2}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\angular-route.min.js.map">
@@ -106,7 +120,6 @@
     </Content>
     <Content Include="Scripts\appchrome.js" />
     <Content Include="Scripts\Elements.xml" />
-    <Content Include="Scripts\App.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
