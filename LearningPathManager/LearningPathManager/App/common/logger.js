@@ -39,7 +39,7 @@
 
             // write to the AngularJS log & specifiy if error or not
             var write = (notificationType === 'error')
-                ? $logError
+                ? $log.error
                 : $log.log;
             source = SourceBuffer
                 ? '[' + source + '] '
@@ -54,23 +54,23 @@
                     if (!config.showDebugNotiSetting) {
                         return;
                     } else {
-                        iconUrl = '../images/info.png';
+                        iconUrl = 'images/info.png';
                         notiTitle = 'Learning Path Manager: DEBUG LOG';
                     }
                 } else if (notificationType === 'error') {
-                    iconUrl = '../images/error.png';
+                    iconUrl = 'images/error.png';
                     notiTitle = 'Learning Path Manager: ERROR';
                 } else if (notificationType === 'warning') {
-                    iconUrl = '../images/warning.png';
+                    iconUrl = 'images/warning.png';
                     notiTitle = 'Learning Path Manager: WARNING';
                 } else if (notificationType === 'success') {
-                    iconUrl = '../images/success.png';
+                    iconUrl = 'images/success.png';
                     notiTitle = 'Learning Path Manager: SUCCESS';
                 }
 
                 // create 'sharepoint' notification
                 var notificationData = new SPStatusNotificationData("", STSHtmlEncode(message), iconUrl, null);
-                var notification = new SPNotification(SPNotifications.ContainerId.Status,
+                var notification = new SPNotification(SPNotifications.ContainerID.Status,
                     STSHtmlEncode(notiTitle),
                     false, // should be sticky or go away
                     null, // tool tip

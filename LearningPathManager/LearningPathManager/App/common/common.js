@@ -18,7 +18,7 @@
         ['$q', '$rootScope', '$timeout', 'commonConfig', 'logger', common]);
 
     function common($q, $rootScope, $timeout, commonConfig, logger) {
-        return {
+        var service = {
             // pass through the AngularJS services / dependencies
             $broadcast: $broadcast,
             $q: $q,
@@ -27,22 +27,26 @@
             logger: logger,
             activateController: activateController
         };
-    }
 
-    // $broadcast mapper
-    function $broadcast() {
-        return $rootScope.$broadcast.apply($rootScope, arguments);
-    }
+        return service;
 
-    // create the activateController event/service
-    function activateController(promises, controllerId) {
-        return $q.all(promises)
-            .then(function (eventArgs) {
-                var data = {
-                    controllerId: controllerId
-                };
-                $broadcast(commonConfig, config.controllerActivateSuccessfulEvent, data);
-            });
+        // $broadcast mapper
+        function $broadcast() {
+            return $rootScope.$broadcast.apply($rootScope, arguments);
+        }
+
+        // create the activateController event/service
+        function activateController(promises, controllerId) {
+            return $q.all(promises)
+                .then(function (eventArgs) {
+                    var data = {
+                        controllerId: controllerId
+                    };
+                    $broadcast(commonConfig.config.controllerActivateSuccessfulEvent, data);
+                    $broadcast(commonConfig.config.workingOnItToggleEvent, { show: false });
+                });
+        }
+
     }
 
 })();

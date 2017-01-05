@@ -7,5 +7,31 @@
     <File Path="App\config.route.js" Url="App/config.route.js" ReplaceContent="TRUE" />
     <File Path="App\common\common.js" Url="App/common/common.js" ReplaceContent="TRUE" />
     <File Path="App\common\logger.js" Url="App/common/logger.js" ReplaceContent="TRUE" />
+    <File Path="App\layout\spAppChrome.html" Url="App/layout/spAppChrome.html" ReplaceContent="TRUE" />
+    <File Path="App\layout\spAppChrome.js" Url="App/layout/spAppChrome.js" ReplaceContent="TRUE" />
+    <File Path="App\layout\shell.html" Url="App/layout/shell.html" ReplaceContent="TRUE" />
+    <File Path="App\layout\shell.js" Url="App/layout/shell.js" ReplaceContent="TRUE" />
+    <File Path="App\learningPath\learningPaths.html" Url="App/learningPath/learningPaths.html" ReplaceContent="TRUE" />
+    <File Path="App\learningPath\learningPaths.js" Url="App/learningPath/learningPaths.js" ReplaceContent="TRUE" />
+    <File Path="App\learningItem\learningItems.html" Url="App/learningItem/learningItems.html" ReplaceContent="TRUE" />
+    <File Path="App\learningItem\learningItems.js" Url="App/learningItem/learningItems.js" ReplaceContent="TRUE" />
+    <File Path="App\util\jquery-extensions.js" Url="App/util/jquery-extensions.js" ReplaceContent="TRUE" />
+    <File Path="App\appLauncher.js" Url="App/appLauncher.js" ReplaceContent="TRUE" />
+    <File Path="App\services\spContext.js" Url="App/services/spContext.js" ReplaceContent="TRUE" />
+    <File Path="App\dashboard\dashboard.html" Url="App/dashboard/dashboard.html" ReplaceContent="TRUE" />
+    <File Path="App\dashboard\dashboard.js" Url="App/dashboard/dashboard.js" ReplaceContent="TRUE" />
+    <File Path="App\layout\quicklaunch.html" Url="App/layout/quicklaunch.html" ReplaceContent="TRUE" />
+    <File Path="App\layout\quicklaunch.js" Url="App/layout/quicklaunch.js" ReplaceContent="TRUE" />
+    <File Path="App\layout\workingonit.html" Url="App/layout/workingonit.html" ReplaceContent="TRUE" />
+    <File Path="App\layout\workingonit.js" Url="App/layout/workingonit.js" ReplaceContent="TRUE" />
+    <File Path="App\layout\header.html" Url="App/layout/header.html" ReplaceContent="TRUE" />
+    <File Path="App\layout\header.js" Url="App/layout/header.js" ReplaceContent="TRUE" />
+    <File Path="App\learningPath\learningPathDetail.html" Url="App/learningPath/learningPathDetail.html" ReplaceContent="TRUE" />
+    <File Path="App\learningPath\learningPathDetail.js" Url="App/learningPath/learningPathDetail.js" ReplaceContent="TRUE" />
+    <File Path="App\learningItem\learningItemDetail.html" Url="App/learningItem/learningItemDetail.html" ReplaceContent="TRUE" />
+    <File Path="App\learningItem\learningItemDetail.js" Url="App/learningItem/learningItemDetail.js" ReplaceContent="TRUE" />
+    <File Path="App\models\learningPath.js" Url="App/models/learningPath.js" ReplaceContent="TRUE" />
+    <File Path="App\services\datacontext.angular.js" Url="App/services/datacontext.angular.js" ReplaceContent="TRUE" />
+    <File Path="App\config.angular.http.js" Url="App/config.angular.http.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

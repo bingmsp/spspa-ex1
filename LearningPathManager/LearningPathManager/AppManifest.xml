@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
-     Name="LearningPathManager"
-     ProductID="{F28301EB-6ED9-47DA-ABC7-B48393A7FC3D}"
+     Name="lpm"
+     ProductID="{B1BB2E4F-8764-434A-BBC8-B55663B7A7BD}"
      Version="1.0.0.0"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>
-    <Title>LearningPathManager</Title>
-    <StartPage>~appWebUrl/Pages/index.html?{StandardTokens}</StartPage>
+    <Title>Learning Path Manager</Title>
+    <StartPage>~appWebUrl/appLauncher.html?{StandardTokens}&amp;SPHostTitle={HostTitle}&amp;SPHostLogoUrl={HostLogoUrl}</StartPage>
   </Properties>
 
   <AppPrincipal>
     <Internal />
   </AppPrincipal>
-
-
+  <AppPermissionRequests>
+  </AppPermissionRequests>
 </App>

@@ -44,30 +44,52 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="Data\LearningItemList\LearningItemListInstance\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{48d21757-2cd7-4c9e-8e04-e5fcb4548009}</SharePointProjectItemId>
+      <SharePointProjectItemId>{dc2665f1-9904-43c9-8d9f-edb339f3f7a3}</SharePointProjectItemId>
     </None>
     <None Include="Data\LearningItemList\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{e9ea8390-fbe8-4321-9246-b49a45564aed}</SharePointProjectItemId>
+      <SharePointProjectItemId>{a6fd7563-aa9b-4ef4-af47-3966535d8813}</SharePointProjectItemId>
     </None>
     <None Include="Data\LearningPathList\LearningPathListInstance\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{16efec00-8954-4321-86d3-673230f390bc}</SharePointProjectItemId>
+      <SharePointProjectItemId>{a9076c81-b2e6-4527-bf87-7a3fbcd32955}</SharePointProjectItemId>
     </None>
     <None Include="Data\LearningPathList\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{e56aaecb-7c7b-4fb8-b6e0-2e9b07cf99ed}</SharePointProjectItemId>
-    </None>
-    <None Include="Features\Feature2\Feature2.feature">
-      <FeatureId>{3460d7b9-4ef6-4d3d-a685-5a6bcd49110f}</FeatureId>
+      <SharePointProjectItemId>{3d7090b2-0694-480f-b3af-d7d872fd1cd4}</SharePointProjectItemId>
     </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{1bd0747a-92e4-4972-9822-189d2988a851}</SharePointProjectItemId>
     </None>
     <Content Include="App\app.js" />
+    <Content Include="App\appLauncher.js" />
     <Content Include="App\common\common.js" />
     <Content Include="App\common\logger.js" />
+    <Content Include="App\config.angular.http.js" />
     <Content Include="App\config.exceptionHandler.js" />
     <Content Include="App\config.js" />
     <Content Include="App\config.route.js" />
+    <Content Include="App\dashboard\dashboard.html" />
+    <Content Include="App\dashboard\dashboard.js" />
+    <Content Include="App\layout\header.html" />
+    <Content Include="App\layout\header.js" />
+    <Content Include="App\layout\quicklaunch.html" />
+    <Content Include="App\layout\quicklaunch.js" />
+    <Content Include="App\layout\shell.html" />
+    <Content Include="App\layout\shell.js" />
+    <Content Include="App\layout\spAppChrome.html" />
+    <Content Include="App\layout\spAppChrome.js" />
+    <Content Include="App\layout\workingonit.html" />
+    <Content Include="App\layout\workingonit.js" />
+    <Content Include="App\learningItem\learningItemDetail.html" />
+    <Content Include="App\learningItem\learningItemDetail.js" />
+    <Content Include="App\learningItem\learningItems.html" />
+    <Content Include="App\learningItem\learningItems.js" />
+    <Content Include="App\learningPath\learningPathDetail.html" />
+    <Content Include="App\learningPath\learningPathDetail.js" />
+    <Content Include="App\learningPath\learningPaths.html" />
+    <Content Include="App\learningPath\learningPaths.js" />
+    <Content Include="App\models\learningPath.js" />
+    <Content Include="App\services\datacontext.angular.js" />
+    <Content Include="App\services\spContext.js" />
     <Content Include="Data\LearningItemList\Elements.xml" />
     <Content Include="Data\LearningItemList\LearningItemListInstance\Elements.xml" />
     <Content Include="Data\LearningItemList\Schema.xml" />
@@ -75,15 +97,24 @@
     <Content Include="Data\LearningPathList\LearningPathListInstance\Elements.xml" />
     <Content Include="Data\LearningPathList\Schema.xml" />
     <Content Include="Elements.xml" />
-    <Content Include="Features\Feature2\Feature2.Template.xml">
-      <DependentUpon>Feature2.feature</DependentUpon>
-    </Content>
     <Content Include="Images\error.png" />
     <Content Include="Images\info.png" />
     <Content Include="Images\success.png" />
     <Content Include="Images\warning.png" />
+    <Content Include="Pages\appLauncher.html" />
     <Content Include="Pages\Elements.xml" />
-    <Content Include="Pages\Default.aspx" />
+    <None Include="Scripts\angular-animate.min.js.map">
+      <DependentUpon>angular-animate.js</DependentUpon>
+    </None>
+    <None Include="Scripts\angular-cookies.min.js.map">
+      <DependentUpon>angular-cookies.js</DependentUpon>
+    </None>
+    <None Include="Scripts\angular-resource.min.js.map">
+      <DependentUpon>angular-resource.js</DependentUpon>
+    </None>
+    <None Include="Scripts\angular.min.js.map">
+      <DependentUpon>angular.js</DependentUpon>
+    </None>
     <None Include="SharePointProjectItem.spdata">
       <SharePointProjectItemId>{efbf9c64-dbdb-439f-95fa-99ccb2aafcb2}</SharePointProjectItemId>
     </None>
@@ -95,17 +126,26 @@
     <None Include="Scripts\angular-sanitize.min.js.map">
       <DependentUpon>angular-sanitize.js</DependentUpon>
     </None>
-    <None Include="Scripts\angular.min.js.map">
-      <DependentUpon>angular.js</DependentUpon>
-    </None>
     <None Include="Scripts\jquery-1.9.1.min.map">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </None>
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{6351fef7-b21f-4dd7-bb7b-894b13f11191}</SharePointProjectItemId>
     </None>
-    <Content Include="Pages\index.html" />
+    <Content Include="Pages\app.html" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js">
+      <DependentUpon>angular-animate.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-cookies.js" />
+    <Content Include="Scripts\angular-cookies.min.js">
+      <DependentUpon>angular-cookies.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-resource.js" />
+    <Content Include="Scripts\angular-resource.min.js">
+      <DependentUpon>angular-resource.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js">
       <DependentUpon>angular-route.js</DependentUpon>
@@ -118,7 +158,6 @@
     <Content Include="Scripts\angular.min.js">
       <DependentUpon>angular.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\appchrome.js" />
     <Content Include="Scripts\Elements.xml" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
@@ -127,8 +166,16 @@
     <Content Include="Scripts\jquery-1.9.1.min.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\jquery-extensions.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    <Content Include="App\util\jquery-extensions.js" />
+    <Content Include="Scripts\moment-with-langs.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment-with-langs.min.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js">
+      <DependentUpon>moment.js</DependentUpon>
     </Content>
     <Content Include="Scripts\_references.js" />
   </ItemGroup>
@@ -167,6 +214,7 @@
       <SubType>Designer</SubType>
     </AppManifestFile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

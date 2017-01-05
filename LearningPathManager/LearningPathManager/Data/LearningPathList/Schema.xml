@@ -4,7 +4,7 @@
     <ContentTypes>
       
       
-    <ContentType ID="0x01003003cd994c3845dda31c27f0b327d5f3" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{52578FC3-1F01-4f4d-B016-94CCBCF428CF}" Name="_Comments" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+    <ContentType ID="0x010091daa844920c4fdd9c015b20756c23e9" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{52578FC3-1F01-4f4d-B016-94CCBCF428CF}" Name="_Comments" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
         <Folder TargetName="Item" />
       </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
     <Fields>

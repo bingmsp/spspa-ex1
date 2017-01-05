@@ -5,7 +5,9 @@
 
     // all events that could be monitored in app
     var events = {
-        controllerActivateSuccess: 'controller.activateSuccess'
+        controllerActivateSuccess: 'controller.activateSuccess',
+        // event when to toggle the working on it dialog
+        workingOnItToggle: 'workingonit.toggle'
     };
 
     // create the app config object
@@ -18,7 +20,7 @@
         // app version
         version: '1.0.0.0',
         // debug notification settings
-        showDebugNotiSetting: true
+        showDebugNotiSetting: false
     };
 
     // create global variable in the app called 'config'
@@ -35,6 +37,7 @@
     // create a common config reference
     app.config(['commonConfigProvider', function (cfg) {
         cfg.config.controllerActivateSuccessEvent = config.events.controllerActivateSuccess;
+        cfg.config.workingOnItToggleEvent = config.events.workingOnItToggle;
     }]);
 
 })();
