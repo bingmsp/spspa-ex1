@@ -10,12 +10,16 @@
         'ngAnimate',    // animation capabilities
         'ngResource',   // ngResource angular service
 
+        // 3rd party libraries
+        'breeze.angular',
+        'breeze.directives',
+
         // my custom modules
         'common'
     ]);
 
     // app startup code
-    app.run(['$route', 'angular.config', function ($route, angularConfig) {
+    app.run(['$route', function ($route, angularConfig) {
         // stuff that should happen before the app loads
     }]);
 })();

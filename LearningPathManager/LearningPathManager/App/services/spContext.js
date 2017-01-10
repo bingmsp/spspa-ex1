@@ -1,13 +1,12 @@
 ﻿(function () {
     'use strict';
 
-    // define service
     var serviceId = 'spContext';
-    angular.module('app').service(serviceId,
-        ['$log', '$cookieStore', '$window', '$location', '$resource', '$timeout', 'common', spContext]);
-   
-    // create service
-    function spContext($log, $cookieStore, $window, $location, $resource, $timeout, common) {
+    var loggerSource = '[' + serviceId + '] ';
+    angular.module('app').service(serviceId, [
+      '$log', '$cookieStore', '$window', '$location', '$resource', '$timeout', 'common', 'commonConfig', spContext]);
+
+    function spContext($log, $cookieStore, $window, $location, $resource, $timeout, common, commonConfig) {
         var service = this;
         var spWeb = {
             appWebUrl: '',
@@ -17,85 +16,86 @@
         };
         service.hostWeb = spWeb;
 
-        // init service
+        // init the service
         init();
 
+        // init... akin to class constructor
         function init() {
+            $log.log(loggerSource, 'service loaded', null);
+
             // if values don't exist on querystring...
-            if (decodeURIComponent(jQuery.getQueryStringValue('SPHostUrl')) === "undefined") {
-                // THEN load app context from cookie
+            if (decodeURIComponent($.getQueryStringValue("SPHostUrl")) === "undefined") {
+                // load the app context form the cookie
                 loadSpAppContext();
 
-                // fire off auto refresh of digest
+                // fire off automatic refresh of security digest
                 refreshSecurityValidation();
             } else {
-                // ELSE create the app context
+                // otherwise, creae the app context
                 createSpAppContext();
             }
         }
 
+        // create sharepoint app context by moving params on querystring to an app cookie
+        function createSpAppContext() {
+            $log.log(loggerSource, 'writing spContext cookie', null);
+
+            var appWebUrl = decodeURIComponent($.getQueryStringValue("SPAppWebUrl"));
+            $cookieStore.put('SPAppWebUrl', appWebUrl);
+
+            var url = decodeURIComponent($.getQueryStringValue("SPHostUrl"));
+            $cookieStore.put('SPHostUrl', url);
+
+            var title = decodeURIComponent($.getQueryStringValue("SPHostTitle"));
+            $cookieStore.put('SPHostTitle', title);
+
+            var logoUrl = decodeURIComponent($.getQueryStringValue("SPHostLogoUrl"));
+            $cookieStore.put('SPHostLogoUrl', logoUrl);
+
+            $log.log(loggerSource, 'redirecting to app', null);
+            $window.location.href = appWebUrl + '/app.html';
+        }
+
+        // init the sharepoint app context by loding the app's cookie contents
         function loadSpAppContext() {
-            $log.log('[spContext]', 'loading spContext cookie', null);
+            $log.log(loggerSource, 'loading spContext cookie', null);
             service.hostWeb.appWebUrl = $cookieStore.get('SPAppWebUrl');
             service.hostWeb.url = $cookieStore.get('SPHostUrl');
             service.hostWeb.title = $cookieStore.get('SPHostTitle');
-            service.hostWeb.logoUrl = $cookieStore.get('SPHostUrl');
+            service.hostWeb.logoUrl = $cookieStore.get('SPHostLogoUrl');
         }
 
-        function createSpAppContext() {
-            $log.log('[spContext]', 'writing spContext cookie', null);
-
-            var appWebUrl = decodeURIComponent(jQuery.getQueryStringValue('SPAppWebUrl'));
-            $cookieStore.put('SPAppWebUrl', appWebUrl);
-
-            var url = decodeURIComponent(jQuery.getQueryStringValue('SPHostUrl'));
-            $cookieStore.put('SPHostUrl', url);
-
-            var title = decodeURIComponent(jQuery.getQueryStringValue('SPHostTitle'));
-            $cookieStore.put('SPHostTitle', title);
-
-            var logoUrl = decodeURIComponent(jQuery.getQueryStringValue('SPHostLogoUrl'));
-            $cookieStore.put('SPHostLogoUrl', logoUrl);
-
-            $log.log('[spContext]', 'redirecting to app', null);
-            $window.location.href = appWebUrl + "/app.html";
-        }
-
+        // fire off automatic refresh of security digest
         function refreshSecurityValidation() {
-            common.logger.log('refreshing security validation', service.securityValidation, serviceId);
+            common.logger.log("refreshing security validation", service.securityValidation, serviceId);
 
-            var siteContextInfoResource = $resource('_api/contextinfo', {}, {
+            var siteContextInfoResource = $resource('_api/contextinfo?$select=FormDigestValue', {}, {
                 post: {
                     method: 'POST',
                     headers: {
-                        'Accept': 'application/json;odata=verbose',
-                        'Content-Type': 'application/json;odata=verbose'
+                        'Accept': 'application/json;odata=verbose;',
+                        'Content-Type': 'application/json;odata=verbose;'
                     }
                 }
             });
 
-            // requestion validation
-            siteContextInfoResource.post({},
-                function (data) {
-                    // success callback
+            // request validation
+            siteContextInfoResource.post({}, function (data) {
+                // obtain security digest timeout & value & store in service
+                var validationRefreshTimeout = data.d.GetContextWebInformation.FormDigestTimeoutSeconds - 10;
+                service.securityValidation = data.d.GetContextWebInformation.FormDigestValue;
+                common.logger.log("refreshed security validation", service.securityValidation, serviceId);
+                common.logger.log("next refresh of security validation: " + validationRefreshTimeout + " seconds", null, serviceId);
 
-                    // obtain digest timeout & value... store in service
-                    var siteContextInfo = data.d.GetContextWebInformation;
-                    var validationRefreshTimeout = siteContextInfo.FormDigestTimeoutSeconds - 10;
-                    service.securityValidation = siteContextInfo.FormDigestValue;
+                // repeat this in FormDigestTimeoutSeconds-10
+                $timeout(function () {
+                    refreshSecurityValidation();
+                }, validationRefreshTimeout * 1000);
+            }, function (error) {
+                common.logger.logError("response from contextinfo", error, serviceId);
+            });
 
-                    common.logger.log('refreshed security validation', service.securityValidation, serviceId);
-                    common.logger.log('next referesh of security validation: ' + validationRefreshTimeout + ' seconds', null, serviceId);
-
-                    // repeat the refresh in timeout
-                    $timeout(function () {
-                        refreshSecurityValidation();
-                    }, validationRefreshTimeout * 1000)
-                }, function (error) {
-                    common.logger.logError('response from contextinfo', error, serviceId);
-                });
 
         }
     }
-
 })();

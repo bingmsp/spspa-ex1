@@ -3,17 +3,18 @@
 
     var app = angular.module('app');
 
-    // all events that could be monitored in app
     var events = {
+        // event when the controller has been successfully activated
         controllerActivateSuccess: 'controller.activateSuccess',
         // event when to toggle the working on it dialog
-        workingOnItToggle: 'workingonit.toggle'
+        workingOnItToggle: 'workingonit.toggle',
+        // event when the security digest has been obtained and/or refreshed
+        securityDigestRefreshed: 'spContext.digestRefreshed'
     };
 
-    // create the app config object
-    // this contains static stuff, like global constants, not global variables
     var config = {
-        // config the exceptionHandler decoration
+        title: 'Learning Path Manager',
+        // config the exceptionHandler decorator
         appErrorPrefix: '[SYSERR] ',
         // app events
         events: events,
@@ -23,21 +24,22 @@
         showDebugNotiSetting: false
     };
 
-    // create global variable in the app called 'config'
+    // create a global variable on app called 'config'
     app.value('config', config);
 
-    // configure AngularJS's logging service before startup
+    // configure the angular logging service before startup
     app.config(['$logProvider', function ($logProvider) {
-        // turn debugging off/on (no info / warnings)
+        // turn debugging off/on (no info or warn)
         if ($logProvider.debugEnabled) {
             $logProvider.debugEnabled(true);
         }
     }]);
 
-    // create a common config reference
+    // configure the common configuration
     app.config(['commonConfigProvider', function (cfg) {
+        // setup events
         cfg.config.controllerActivateSuccessEvent = config.events.controllerActivateSuccess;
         cfg.config.workingOnItToggleEvent = config.events.workingOnItToggle;
+        cfg.config.spContextSecurityDigestRefreshedEvent = config.events.securityDigestRefreshed;
     }]);
-
 })();

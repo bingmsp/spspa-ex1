@@ -64,6 +64,7 @@
     <Content Include="App\common\common.js" />
     <Content Include="App\common\logger.js" />
     <Content Include="App\config.angular.http.js" />
+    <Content Include="App\config.breeze.js" />
     <Content Include="App\config.exceptionHandler.js" />
     <Content Include="App\config.js" />
     <Content Include="App\config.route.js" />
@@ -79,17 +80,21 @@
     <Content Include="App\layout\spAppChrome.js" />
     <Content Include="App\layout\workingonit.html" />
     <Content Include="App\layout\workingonit.js" />
-    <Content Include="App\learningItem\learningItemDetail.html" />
-    <Content Include="App\learningItem\learningItemDetail.js" />
+    <Content Include="App\learningItem\learningItemsDetail.html" />
+    <Content Include="App\learningItem\learningItemsDetail.js" />
     <Content Include="App\learningItem\learningItems.html" />
     <Content Include="App\learningItem\learningItems.js" />
-    <Content Include="App\learningPath\learningPathDetail.html" />
-    <Content Include="App\learningPath\learningPathDetail.js" />
+    <Content Include="App\learningPath\learningPathsDetail.html" />
+    <Content Include="App\learningPath\learningPathsDetail.js" />
     <Content Include="App\learningPath\learningPaths.html" />
     <Content Include="App\learningPath\learningPaths.js" />
+    <Content Include="App\models\breeze.entities.js" />
+    <Content Include="App\models\learningItem.js" />
     <Content Include="App\models\learningPath.js" />
     <Content Include="App\services\datacontext.angular.js" />
+    <Content Include="App\services\datacontext.breeze.js" />
     <Content Include="App\services\spContext.js" />
+    <Content Include="Content\breeze.directives.css" />
     <Content Include="Data\LearningItemList\Elements.xml" />
     <Content Include="Data\LearningItemList\LearningItemListInstance\Elements.xml" />
     <Content Include="Data\LearningItemList\Schema.xml" />
@@ -158,6 +163,15 @@
     <Content Include="Scripts\angular.min.js">
       <DependentUpon>angular.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\breeze.bridge.angular.js" />
+    <Content Include="Scripts\breeze.debug.js">
+      <DependentUpon>breeze.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\breeze.directives.js" />
+    <Content Include="Scripts\breeze.labs.dataservice.abstractrest.js" />
+    <Content Include="Scripts\breeze.labs.dataservice.sharepoint.js" />
+    <Content Include="Scripts\breeze.metadata-helper.js" />
+    <Content Include="Scripts\breeze.min.js" />
     <Content Include="Scripts\Elements.xml" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>

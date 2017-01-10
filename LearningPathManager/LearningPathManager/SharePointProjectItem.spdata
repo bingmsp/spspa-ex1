@@ -27,12 +27,16 @@
     <ProjectItemFile Source="App\layout\workingonit.js" Target="App\layout\" Type="ElementFile" />
     <ProjectItemFile Source="App\layout\header.html" Target="App\layout\" Type="ElementFile" />
     <ProjectItemFile Source="App\layout\header.js" Target="App\layout\" Type="ElementFile" />
-    <ProjectItemFile Source="App\learningPath\learningPathDetail.html" Target="App\learningPath\" Type="ElementFile" />
-    <ProjectItemFile Source="App\learningPath\learningPathDetail.js" Target="App\learningPath\" Type="ElementFile" />
-    <ProjectItemFile Source="App\learningItem\learningItemDetail.html" Target="App\learningItem\" Type="ElementFile" />
-    <ProjectItemFile Source="App\learningItem\learningItemDetail.js" Target="App\learningItem\" Type="ElementFile" />
+    <ProjectItemFile Source="App\learningPath\learningPathsDetail.html" Target="App\learningPath\" Type="ElementFile" />
+    <ProjectItemFile Source="App\learningPath\learningPathsDetail.js" Target="App\learningPath\" Type="ElementFile" />
+    <ProjectItemFile Source="App\learningItem\learningItemsDetail.html" Target="App\learningItem\" Type="ElementFile" />
+    <ProjectItemFile Source="App\learningItem\learningItemsDetail.js" Target="App\learningItem\" Type="ElementFile" />
     <ProjectItemFile Source="App\models\learningPath.js" Target="App\models\" Type="ElementFile" />
     <ProjectItemFile Source="App\services\datacontext.angular.js" Target="App\services\" Type="ElementFile" />
     <ProjectItemFile Source="App\config.angular.http.js" Target="App\" Type="ElementFile" />
+    <ProjectItemFile Source="App\models\learningItem.js" Target="App\models\" Type="ElementFile" />
+    <ProjectItemFile Source="App\services\datacontext.breeze.js" Target="App\services\" Type="ElementFile" />
+    <ProjectItemFile Source="App\config.breeze.js" Target="App\" Type="ElementFile" />
+    <ProjectItemFile Source="App\models\breeze.entities.js" Target="App\models\" Type="ElementFile" />
   </Files>
 </ProjectItem>

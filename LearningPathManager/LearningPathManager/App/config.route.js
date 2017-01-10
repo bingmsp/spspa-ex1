@@ -49,7 +49,7 @@
             {
                 url: '/LearningPaths/:id',
                 config: {
-                    templateUrl: 'App/learningPath/learningPathDetail.html',
+                    templateUrl: 'App/learningPath/learningPathsDetail.html',
                     title: ':learning paths',
                     settings: {
                         nav: 1.1,

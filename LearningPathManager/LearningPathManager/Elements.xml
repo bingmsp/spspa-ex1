@@ -26,12 +26,16 @@
     <File Path="App\layout\workingonit.js" Url="App/layout/workingonit.js" ReplaceContent="TRUE" />
     <File Path="App\layout\header.html" Url="App/layout/header.html" ReplaceContent="TRUE" />
     <File Path="App\layout\header.js" Url="App/layout/header.js" ReplaceContent="TRUE" />
-    <File Path="App\learningPath\learningPathDetail.html" Url="App/learningPath/learningPathDetail.html" ReplaceContent="TRUE" />
-    <File Path="App\learningPath\learningPathDetail.js" Url="App/learningPath/learningPathDetail.js" ReplaceContent="TRUE" />
-    <File Path="App\learningItem\learningItemDetail.html" Url="App/learningItem/learningItemDetail.html" ReplaceContent="TRUE" />
-    <File Path="App\learningItem\learningItemDetail.js" Url="App/learningItem/learningItemDetail.js" ReplaceContent="TRUE" />
+    <File Path="App\learningPath\learningPathsDetail.html" Url="App/learningPath/learningPathsDetail.html" ReplaceContent="TRUE" />
+    <File Path="App\learningPath\learningPathsDetail.js" Url="App/learningPath/learningPathsDetail.js" ReplaceContent="TRUE" />
+    <File Path="App\learningItem\learningItemsDetail.html" Url="App/learningItem/learningItemsDetail.html" ReplaceContent="TRUE" />
+    <File Path="App\learningItem\learningItemsDetail.js" Url="App/learningItem/learningItemsDetail.js" ReplaceContent="TRUE" />
     <File Path="App\models\learningPath.js" Url="App/models/learningPath.js" ReplaceContent="TRUE" />
     <File Path="App\services\datacontext.angular.js" Url="App/services/datacontext.angular.js" ReplaceContent="TRUE" />
     <File Path="App\config.angular.http.js" Url="App/config.angular.http.js" ReplaceContent="TRUE" />
+    <File Path="App\models\learningItem.js" Url="App/models/learningItem.js" ReplaceContent="TRUE" />
+    <File Path="App\services\datacontext.breeze.js" Url="App/services/datacontext.breeze.js" ReplaceContent="TRUE" />
+    <File Path="App\config.breeze.js" Url="App/config.breeze.js" ReplaceContent="TRUE" />
+    <File Path="App\models\breeze.entities.js" Url="App/models/breeze.entities.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>
